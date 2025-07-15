@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Karma Company - Exotic Spices</title>
+    <link rel="icon" type="image/png" href="good karma logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="good karma logo.png" alt="Good Karma Company Logo" class="logo">
+                <span class="logo-text">Good Karma</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#products" class="nav-link">Spices</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#cart" class="nav-link cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Nourish Your Body<br><span class="accent">Feed Your Soul</span></h1>
+            <p class="hero-subtitle">Discover exotic spices from around the world, carefully sourced to bring authentic flavours to your South African kitchen</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Explore Spices</button>
+                <button class="btn btn-secondary">Our Story</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="spice-bowl"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Journey</h2>
+                    <p>At Good Karma Company, we believe that cooking is a sacred act of nourishment. From our base in South Africa, our mission is to bring you the finest exotic spices from around the globe, each one carefully selected for its authentic flavour and positive energy.</p>
+                    <p>Every spice tells a story of distant lands, ancient traditions, and the passionate farmers who cultivate them with love and respect for the earth. We're proud to share these treasures with fellow South Africans who appreciate quality and authenticity.</p>
+                    <div class="values">
+                        <div class="value-item">
+                            <i class="fas fa-leaf"></i>
+                            <h4>Natural & Pure</h4>
+                            <p>Organic, chemical-free spices</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-globe"></i>
+                            <h4>Ethically Sourced</h4>
+                            <p>Direct trade with farmers</p>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-heart"></i>
+                            <h4>Made with Love</h4>
+                            <p>Passion in every package</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="mandala-bg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Our Exotic Spices</h2>
+            <p class="section-subtitle">Handpicked from the finest sources around the world</p>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All Spices</button>
+                <button class="filter-btn" data-filter="asian">Asian</button>
+                <button class="filter-btn" data-filter="indian">Indian</button>
+                <button class="filter-btn" data-filter="mediterranean">Mediterranean</button>
+                <button class="filter-btn" data-filter="middle-eastern">Middle Eastern</button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-category="indian">
+                    <div class="product-image">
+                        <div class="product-placeholder turmeric"></div>
+                        <div class="product-overlay">
+                            <button class="btn btn-primary add-to-cart" data-product="turmeric">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Turmeric</h3>
+                        <p>Golden anti-inflammatory wonder spice</p>
+                        <div class="product-price">R159.99</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="middle-eastern">
+                    <div class="product-image">
+                        <div class="product-placeholder saffron"></div>
+                        <div class="product-overlay">
+                            <button class="btn btn-primary add-to-cart" data-product="saffron">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pure Saffron</h3>
+                        <p>The world's most precious spice</p>
+                        <div class="product-price">R1,299.99</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="asian">
+                    <div class="product-image">
+                        <div class="product-placeholder star-anise"></div>
+                        <div class="product-overlay">
+                            <button class="btn btn-primary add-to-cart" data-product="star-anise">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Star Anise</h3>
+                        <p>Aromatic eight-pointed star spice</p>
+                        <div class="product-price">R199.99</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="indian">
+                    <div class="product-image">
+                        <div class="product-placeholder cardamom"></div>
+                        <div class="product-overlay">
+                            <button class="btn btn-primary add-to-cart" data-product="cardamom">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Green Cardamom</h3>
+                        <p>Queen of spices with intense aroma</p>
+                        <div class="product-price">R329.99</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="mediterranean">
+                    <div class="product-image">
+                        <div class="product-placeholder sumac"></div>
+                        <div class="product-overlay">
+                            <button class="btn btn-primary add-to-cart" data-product="sumac">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Sumac</h3>
+                        <p>Tangy ruby-red Mediterranean spice</p>
+                        <div class="product-price">R249.99</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="asian">
+                    <div class="product-image">
+                        <div class="product-placeholder szechuan"></div>
+                        <div class="product-overlay">
+                            <button class="btn btn-primary add-to-cart" data-product="szechuan">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Szechuan Peppercorns</h3>
+                        <p>Mouth-tingling Chinese spice</p>
+                        <div class="product-price">R269.99</div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Join Our Spice Journey</h2>
+                <p>Get exclusive recipes, spice tips, and special offers delivered to your inbox across South Africa</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="good karma logo.png" alt="Good Karma Company Logo" class="logo">
+                        <h3>Good Karma Company</h3>
+                    </div>
+                    <p>Nourish your body, feed your soul with our exotic spices from around the world.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#products">Our Spices</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Delivery Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> hello@goodkarmacompany.co.za</p>
+                        <p><i class="fas fa-phone"></i> +27 (0)11 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Spice Street, Cape Town, South Africa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Good Karma Company. All rights reserved. Made with ❤️ and spices.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <h3>Total: R<span id="cart-total">0.00</span></h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="continue-shopping">Continue Shopping</button>
+                <button class="btn btn-primary" id="checkout">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

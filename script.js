@@ -57,6 +57,26 @@ function setupNavigation() {
         });
     });
 
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (isMenuOpen && !navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            isMenuOpen = false;
+            resetHamburger();
+        }
+    });
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && isMenuOpen) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            isMenuOpen = false;
+            resetHamburger();
+        }
+    });
+
     // Navbar scroll effect
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
@@ -209,19 +229,19 @@ function updateCartUI() {
         cartItems.innerHTML = '<p style="text-align: center; color: #7f8c8d; padding: 20px;">Your cart is empty</p>';
     } else {
         cartItems.innerHTML = cart.map(item => `
-            <div class="cart-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #ecf0f1;">
-                <div>
-                    <h4 style="margin: 0 0 5px 0; color: #2d5016;">${item.name}</h4>
-                    <p style="margin: 0; color: #7f8c8d; font-size: 0.9rem;">R${item.price.toFixed(2)} each</p>
+            <div class="cart-item">
+                <div class="cart-item-info">
+                    <h4>${item.name}</h4>
+                    <p>R${item.price.toFixed(2)} each</p>
                 </div>
-                <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="cart-item-controls">
                     <button onclick="updateQuantity('${item.key}', ${item.quantity - 1})" 
-                            style="width: 30px; height: 30px; border: 1px solid #ddd; background: white; border-radius: 50%; cursor: pointer;">-</button>
-                    <span style="min-width: 20px; text-align: center; font-weight: bold;">${item.quantity}</span>
+                            class="quantity-btn">-</button>
+                    <span class="quantity">${item.quantity}</span>
                     <button onclick="updateQuantity('${item.key}', ${item.quantity + 1})" 
-                            style="width: 30px; height: 30px; border: 1px solid #ddd; background: white; border-radius: 50%; cursor: pointer;">+</button>
+                            class="quantity-btn">+</button>
                     <button onclick="removeFromCart('${item.key}')" 
-                            style="margin-left: 10px; color: #e74c3c; background: none; border: none; cursor: pointer; font-size: 1.2rem;">×</button>
+                            class="remove-btn">×</button>
                 </div>
             </div>
         `).join('');
